@@ -4,6 +4,12 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [S
 
 ## [Unreleased]
 
+### Changed
+- README redesign with banner, badges and demo; deep docs moved to `docs/`.
+
+### Added
+- SECURITY.md, issue and PR templates, `.editorconfig`.
+
 ## [1.0.0] - 2026-10-13
 
 ### Added
