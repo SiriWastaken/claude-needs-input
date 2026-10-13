@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Terminal tab title changes: working, needs input, done">
+  <rect width="900" height="300" rx="14" fill="#14110f"/>
+  <g font-family="Menlo, Consolas, monospace" font-size="15">
+    <text x="30" y="40" fill="#8c7260">Tab bar while you work in another window:</text>
+
+    <rect x="30" y="60" width="270" height="40" rx="8" fill="#2b231d"/>
+    <text x="48" y="85" fill="#d9a67a">✻ my-project</text>
+    <text x="48" y="124" fill="#8c7260">Claude is working</text>
+
+    <rect x="320" y="60" width="270" height="40" rx="8" fill="#5a3a12" stroke="#ffb347" stroke-width="2"/>
+    <text x="338" y="85" fill="#ffb347" font-weight="bold">⚠ NEEDS INPUT — my-project</text>
+    <text x="338" y="124" fill="#ffb347">Permission prompt: bell + notification</text>
+
+    <rect x="610" y="60" width="260" height="40" rx="8" fill="#1d3322"/>
+    <text x="628" y="85" fill="#6fdc8c">✔ my-project</text>
+    <text x="628" y="124" fill="#8c7260">Claude finished</text>
+
+    <text x="30" y="190" fill="#8c7260">$ claude</text>
+    <text x="30" y="215" fill="#f5e9dc">Claude wants to run: <tspan fill="#ffb347">rm -rf build/</tspan></text>
+    <text x="30" y="240" fill="#f5e9dc">Do you want to proceed?  <tspan fill="#6fdc8c">1. Yes</tspan>  2. No</text>
+    <text x="30" y="275" fill="#8c7260">↑ you see the amber tab from across the screen, hear the bell, get a banner.</text>
+  </g>
+</svg>
