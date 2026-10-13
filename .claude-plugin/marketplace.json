@@ -1,0 +1,12 @@
+{
+  "name": "needs-input",
+  "description": "Marketplace for the claude-needs-input plugin",
+  "owner": { "name": "SiriWastaken" },
+  "plugins": [
+    {
+      "name": "needs-input",
+      "source": "./",
+      "description": "Makes it obvious when Claude Code is waiting on you: terminal title flag, bell and desktop notification."
+    }
+  ]
+}

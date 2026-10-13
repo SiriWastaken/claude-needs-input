@@ -1,0 +1,10 @@
+{
+  "name": "needs-input",
+  "version": "0.1.0",
+  "description": "Makes it obvious when Claude Code is waiting on you: terminal title flag, bell and desktop notification.",
+  "author": { "name": "SiriWastaken" },
+  "homepage": "https://github.com/SiriWastaken/claude-needs-input",
+  "repository": "https://github.com/SiriWastaken/claude-needs-input",
+  "license": "MIT",
+  "keywords": ["notification", "terminal", "hooks", "attention"]
+}
