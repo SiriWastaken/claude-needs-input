@@ -4,6 +4,17 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [S
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-13
+
+### Added
+- Desktop notifications for iTerm2, WezTerm, Windows Terminal (OSC 9) and Kitty (OSC 99), auto-detected.
+- `CNI_NOTIFY_STYLE` to force the notification escape.
+- README terminal support table, troubleshooting and uninstall sections.
+
+### Fixed
+- Works with macOS's default bash 3.2.
+- CI shellcheck warnings in the test script.
+
 ## [0.1.0] - 2026-10-13
 
 ### Added

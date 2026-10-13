@@ -28,6 +28,7 @@ Environment variables, set in your shell or Claude Code `env` settings:
 | `CNI_BELL` | `1` | `0` disables the bell |
 | `CNI_NOTIFY` | `1` | `0` disables the desktop notification |
 | `CNI_TITLE_PREFIX` | `⚠ NEEDS INPUT` | Text shown in the title while waiting |
+| `CNI_NOTIFY_STYLE` | auto | Force the notification escape: `777`, `9` or `99` (see below) |
 
 ## How it works
 
@@ -43,7 +44,30 @@ The script returns a `terminalSequence` JSON field; Claude Code writes it to you
 
 ## Terminal support
 
-Title and bell work nearly everywhere. Desktop notifications use OSC 777 (Ghostty, Warp, urxvt); iTerm2/WezTerm use OSC 9 and Kitty uses OSC 99, which this version does not emit yet. Not yet tested across terminals. `terminalSequence` is ignored in `-p` and Agent SDK runs.
+The title and bell work in nearly every terminal. Desktop notifications need a terminal that understands one of these escapes; the plugin picks one from your environment:
+
+| Terminal | Detected by | Escape |
+| --- | --- | --- |
+| iTerm2, WezTerm | `TERM_PROGRAM` | OSC 9 |
+| Windows Terminal | `WT_SESSION` | OSC 9 |
+| Kitty | `KITTY_WINDOW_ID` / `TERM=xterm-kitty` | OSC 99 |
+| Ghostty, Warp, urxvt, others | fallback | OSC 777 |
+
+Terminals that don't support the chosen escape ignore it. Inside tmux or over SSH detection may guess wrong; set `CNI_NOTIFY_STYLE` explicitly (tmux also needs `set -g allow-passthrough on` for some escapes). macOS Terminal.app has no notification escape, so you get the title and bell only.
+
+`terminalSequence` is ignored in `claude -p` and Agent SDK runs.
+
+## Troubleshooting
+
+- **Nothing happens:** check `jq --version` works in the shell Claude Code starts from, and `claude plugin list` shows `needs-input@needs-input` enabled.
+- **Title never changes:** some terminals or shell prompts overwrite the title on every prompt (e.g. oh-my-zsh `DISABLE_AUTO_TITLE`); disable that.
+- **Notifications don't appear:** allow notifications for your terminal app in system settings, and check the table above.
+
+## Uninstall
+
+```
+/plugin uninstall needs-input@needs-input
+```
 
 ## Development
 
