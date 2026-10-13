@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" role="img" aria-label="claude-needs-input">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1410"/>
+      <stop offset="1" stop-color="#2b1d14"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="260" rx="18" fill="url(#bg)"/>
+  <rect x="150" y="40" width="600" height="46" rx="10" fill="#3a2a1d"/>
+  <circle cx="176" cy="63" r="6" fill="#ff5f56"/><circle cx="198" cy="63" r="6" fill="#ffbd2e"/><circle cx="220" cy="63" r="6" fill="#27c93f"/>
+  <text x="450" y="69" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="18" fill="#ffb347">⚠ NEEDS INPUT — my-project</text>
+  <text x="450" y="152" text-anchor="middle" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="700" fill="#f5e9dc">claude-needs-input</text>
+  <text x="450" y="196" text-anchor="middle" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#d9a67a">Never miss a Claude Code prompt again.</text>
+  <text x="450" y="228" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="14" fill="#8c7260">title flag · bell · desktop notification</text>
+</svg>
